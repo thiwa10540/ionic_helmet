@@ -1,0 +1,16 @@
+page-set-bluetooth {
+    // ปรับพื้นหลังเป็นสีดำ
+    .bg-style{
+        background-color: #222;
+    }
+    // ปรับส่วนแสดงชื่อบลูทูธ
+    .detail-style{
+        background-color: #222;
+        color: #fff;
+    }
+    // ปรับส่วนแสดงชื่อบลูทูธ
+    span .detail-style{
+        color: #fff;
+        background-color: #222;
+    }
+}

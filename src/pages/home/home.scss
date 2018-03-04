@@ -1,0 +1,17 @@
+page-home {
+    // ปรับพื้นหลังเป็นสีดำ ตัวอักษรสีขาว
+    .bg-style {
+        background-color: #222;
+        color: #ffffff;
+    }
+    // ปรับขนาดตัวอักษรของ Location
+    .n-style {
+        font-size: 24px;
+        font-weight: 900;
+    }
+    // ปรับพื้นหลังเป็นสีดำ ตัวอักษรสีขาวของ list
+    .l-style {
+        background-color: #222;
+        color: #ffffff;
+    }
+}

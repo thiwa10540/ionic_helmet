@@ -1,0 +1,54 @@
+<ion-header>
+  <ion-navbar color="theme">
+    <ion-title>
+      Location Setting
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content class="bg-style">
+  <ion-grid>
+    <ion-row>
+      <ion-col col-8>
+          <h1>Add Your Location</h1>
+        <!-- ช่องสำหรับกรอกข้อมูลและแสดงข้อมูล -->
+        <ion-list>
+          <ion-item class="item-style">
+            <ion-label fixed>location 1</ion-label>
+            <ion-input type="text" [(ngModel)]="location1"></ion-input> 
+          </ion-item>          
+          <ion-item class="item-style">
+            <ion-label fixed>location 2</ion-label>
+            <ion-input type="text" [(ngModel)]="location2"></ion-input>
+          </ion-item>
+          <ion-item class="item-style">
+            <ion-label fixed>location 3</ion-label>
+            <ion-input type="text" [(ngModel)]="location3"></ion-input>
+          </ion-item>   
+          <ion-item class="item-style">
+            <ion-label fixed>location 4</ion-label>
+            <ion-input type="text" [(ngModel)]="location4"></ion-input>
+          </ion-item> 
+          <ion-item class="item-style">
+            <ion-label fixed>location 5</ion-label>
+            <ion-input type="text" [(ngModel)]="location5"></ion-input>
+          </ion-item>
+        </ion-list>
+      </ion-col>
+      <ion-col col-4>
+        <ion-row>
+          <ion-col col-12>
+            <!-- ปุ่มบันทึกค่าลงใน local storage โดยการเรียนกฟังก์ชั่น syrageIdentity -->
+            <button ion-button color="secondary" (click)="storeIdentity()" full large>Set My Location</button>
+          </ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col col-12>
+            <!-- ปุ่มแสดงค่าจาก Local storage โดยการเรียกฟังก์ชั่น getMuname -->
+            <button ion-button color="primary" (click)="getMuname()" full large>Get My Location</button>
+          </ion-col>
+        </ion-row>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>

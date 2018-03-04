@@ -1,0 +1,40 @@
+<ion-header>
+    <ion-navbar color="theme">
+      <ion-title>
+        Bluetooth Setting
+      </ion-title>
+    </ion-navbar>
+  </ion-header>
+
+<ion-content padding class="bg-style">
+  <ion-grid>
+    <ion-row>
+      <ion-col col-6>
+        <!-- เมื่อกดปุ่มจะเรียกฟังก์ชั่น startScanning() -->
+        <button ion-button color="secondary" (click)="startScanning()" full large>Scan</button>
+      </ion-col>
+      <ion-col col-6>
+        <!-- เมื่อกดปุ่มจะเรียกฟังก์ชั่น disconnect() -->
+        <button ion-button color="danger" (click)="disconnect()" full large>Disconnect</button>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col col-12 >
+        <ion-list class="detail-style">
+          <ion-list-header class="detail-style">
+            <h1>Available devices</h1>
+          </ion-list-header>
+          <!-- loop หาอุปกรณ์ที่เปิดใช้งานบลูทูธอยู่ -->
+          <ion-item *ngFor='let device of unpairedDevices' class="detail-style">
+            <!-- เมื่อกดที่แmd span จะเรียกฟังก์ชั่น selectDevice(device.address) พร้อมส่งชื่อไปให้ฟังก์ชั่นด้วย -->
+            <span (click)="selectDevice(device.address)" class="detail-style">
+              {{device.name}}
+            </span>
+          </ion-item>
+          <!-- แสดงชื่ออุปกรณ์ที่ค้นหาเจอ -->
+          <ion-spinner name="crescent" *ngIf="gettingDevices"></ion-spinner>
+        </ion-list>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>

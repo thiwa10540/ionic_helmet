@@ -1,0 +1,64 @@
+<ion-content  class="bg-style">
+  <ion-grid>
+    <ion-row>
+      <ion-col col-12>
+        <ion-row>
+          <ion-col col-12>
+            <div class="n-style">
+              <ion-icon name="pin">&nbsp;&nbsp;Location</ion-icon>
+            </div>
+          </ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col col-12>
+              <ion-list class="l-style">
+                  <!-- เมื่อกดที่ list item ใดๆจะเรียกฟังก์ชั่น navme() -->
+                  <ion-item (click)="navme(this.flct1)" class="l-style"> 
+                    <h1>1.&nbsp;&nbsp;{{this.flct1}}</h1>
+                  </ion-item>
+                  <ion-item (click)="navme(this.flct2)" class="l-style">
+                    <h1>2.&nbsp;&nbsp;{{this.flct2}}</h1>
+                  </ion-item>
+                  <ion-item (click)="navme(this.flct3)" class="l-style">
+                    <h1>3.&nbsp;&nbsp;{{this.flct3}}</h1>
+                  </ion-item>
+                  <ion-item (click)="navme(this.flct4)" class="l-style">
+                    <h1>4.&nbsp;&nbsp;{{this.flct4}}</h1>
+                  </ion-item>
+                  <ion-item (click)="navme(this.flct5)" class="l-style">
+                    <h1>5.&nbsp;&nbsp;{{this.flct5}}</h1>
+                  </ion-item>
+                </ion-list>
+          </ion-col>
+        </ion-row>
+      </ion-col>
+      <!-- <ion-col col-5>
+        <ion-row>
+            <ion-col col-12> -->
+                <!-- เมื่อคลิกที่ div นี้จะเรียกฟังก์ชั่น goTosetbluetooth() -->
+                <!-- <div class="d-bluetooth" (click)="goTosetbluetooth()"> 
+                  <ion-icon name="bluetooth"></ion-icon>
+                </div>
+            </ion-col>
+        </ion-row>
+        <ion-row>
+            <ion-col col-12> -->
+                <!-- เมื่อคลิกที่ div นี้จะเรียกฟังก์ชั่น goTosetfavorites() -->
+                <!-- <div class="d-favorites" (click)="goTosetfavorites()">
+                    <ion-icon name="settings"></ion-icon>
+                </div>
+            </ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col col-12> -->
+              <!-- เมื่อกดปุ่มที่ div นี้จะเรียกฟังก์ชั่น speech() -->
+              <!-- <div class="d-Mic" (click)="speech()">
+                <ion-icon name="mic"></ion-icon>
+              </div>
+          </ion-col>
+        </ion-row>
+      </ion-col> -->
+    </ion-row>
+  </ion-grid>
+  {{getData}}
+</ion-content>
